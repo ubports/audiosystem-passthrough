@@ -1,0 +1,2 @@
+debian/tmp/usr/include/audiosystem-passthrough usr/include
+debian/tmp/usr/lib/pkgconfig usr/lib

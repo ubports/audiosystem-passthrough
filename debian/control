@@ -1,0 +1,23 @@
+Source: audiosystem-passthrough
+Priority: optional
+Maintainer: Danct12 <danct12@disroot.org>
+Build-Depends: debhelper (>= 7),
+               libgbinder-dev (>= 1.0.32),
+               libglib2.0-dev
+Standards-Version: 3.8.4
+
+Package: audiosystem-passthrough
+Section: libs
+Architecture: any
+Depends: libgbinder (>= 1.0.32),
+         libglib2.0-0,
+         ${shlibs:Depends}, ${misc:Depends}
+Description: Audio passthrough helper.. am I right?
+
+Package: audiosystem-passthrough-dev
+Section: libdevel
+Architecture: any
+Depends: libgbinder (>= 1.0.32),
+         libglib2.0-0,
+         ${shlibs:Depends}, ${misc:Depends}
+Description: Development files for audiosystem-passthrough.
