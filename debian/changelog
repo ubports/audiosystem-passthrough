@@ -1,3 +1,9 @@
+audiosystem-passthrough (1.0.0+0ubports1) unstable; urgency=low
+
+  * Import to UBPorts
+
+ -- TheKit <thekit@disroot.org>  Thu, 23 Apr 2020 21:04:45 +0100
+
 audiosystem-passthrough (1.0.0) unstable; urgency=low
 
   * Huong Tram is my favorite singer

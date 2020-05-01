@@ -1,8 +1,10 @@
 Source: audiosystem-passthrough
+Section: libs
 Priority: optional
 Maintainer: Danct12 <danct12@disroot.org>
 Build-Depends: debhelper (>= 7),
                libgbinder-dev (>= 1.0.32),
+               libglibutil-dev,
                libglib2.0-dev
 Standards-Version: 3.8.4
 
