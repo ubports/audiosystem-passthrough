@@ -75,7 +75,7 @@ $(BUILD_DIR)/%.o : $(SRC_DIR)/%.c
 $(PKGCONFIG): $(EXE).pc.in Makefile
 	sed -e 's,\[version\],'$(PCVERSION),g \
 		-e 's,\[includedir\],'$(PREFIX)/include,g \
-		-e 's,\[helperdir\],'$(PREFIX)/libexec/$(EXE),g $< > $@
+		-e 's,\[helperdir\],'$(PREFIX)/lib/$(EXE),g $< > $@
 
 $(RELEASE_EXE): $(BUILD_DIR) $(RELEASE_OBJS)
 	$(LD) $(RELEASE_OBJS) $(RELEASE_LDFLAGS) -o $@
@@ -84,8 +84,8 @@ ifeq ($(KEEP_SYMBOLS),0)
 endif
 
 install: $(RELEASE_EXE)
-	mkdir -p $(DESTDIR)$(PREFIX)/libexec/$(EXE)
-	cp $< $(DESTDIR)$(PREFIX)/libexec/$(EXE)/$(EXE)
+	mkdir -p $(DESTDIR)$(PREFIX)/lib/$(EXE)
+	cp $< $(DESTDIR)$(PREFIX)/lib/$(EXE)/$(EXE)
 	mkdir -p $(DESTDIR)$(PREFIX)/lib/pkgconfig
 	cp $(BUILD_DIR)/$(EXE).pc $(DESTDIR)$(PREFIX)/lib/pkgconfig
 	mkdir -p $(DESTDIR)$(PREFIX)/include/audiosystem-passthrough
